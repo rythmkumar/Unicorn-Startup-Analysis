@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Group 21">
+<meta name="dcterms.date" content="2023-11-16">
+
+<title>Unicorn Startups’ Data Analysis Report</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Report_files/libs/quarto-html/quarto.js"></script>
+<script src="Report_files/libs/quarto-html/popper.min.js"></script>
+<script src="Report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Unicorn Startups’ Data Analysis Report</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Group 21 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 16, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="about-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="about-the-data">About the Data</h2>
+<p>We scraped the data about the Unicorn Startups in the World from <a href="https://www.cbinsights.com/research-unicorn-companies">CB Insights</a> and Wikipedia which has collected data from IMF’s World economic outlook and World Bank’s Data.</p>
+<p>The variables extracted are as follows:</p>
+<ul>
+<li><strong>Company</strong>
+<ul>
+<li><em>character</em></li>
+<li>Startup’s name</li>
+</ul></li>
+<li><strong>Valuation</strong>
+<ul>
+<li><em>integer</em></li>
+<li>Companies’ Valuation</li>
+</ul></li>
+<li><strong>Date Joined</strong>
+<ul>
+<li>Unicorn joining <em>Date</em></li>
+</ul></li>
+<li><strong>Country</strong>
+<ul>
+<li><em>character</em></li>
+<li>Country of origin</li>
+</ul></li>
+<li><strong>City</strong>
+<ul>
+<li><em>character</em></li>
+<li>City of origin</li>
+</ul></li>
+<li><strong>Industry</strong>
+<ul>
+<li><em>character</em></li>
+<li>Type of industry. This has been sub-classified into -Media &amp; Entertainment -Industrials -Consumer &amp; Retail -Financial Services -Enterprise Tech -Healthcare &amp; Life Sciences -Insurance</li>
+</ul></li>
+<li><strong>Select Investors</strong>
+<ul>
+<li><em>Character</em></li>
+<li>Investors’ Name The data consists of Unicorn Startups across different countries in decreasing order of their Valuation.</li>
+</ul></li>
+</ul>
+<p>The data consists of 1050 data points with 7 variables. This data consists of We also have additional variables for every country for 2021:</p>
+<ul>
+<li>Population</li>
+<li>GDP</li>
+<li>Population Density</li>
+<li>GDP Growth Rate</li>
+</ul>
+<hr>
+</section>
+<section id="obtaining-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="obtaining-the-data">Obtaining the Data</h2>
+<p>The data was obtained from the following sources:</p>
+<ul>
+<li>Main Data Scraped from CB Insights: <a href="https://www.cbinsights.com/research-unicorn-companies">Link</a></li>
+<li>Added data of GDP from Wikipedia <a href="https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)#References">Link</a></li>
+</ul>
+</section>
+<section id="biases-in-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="biases-in-the-data">Biases in the Data</h2>
+<ul>
+<li><strong>Biases in Methodology</strong> Our data collection methodology involves scraping information from CB Insights. It’s important to note that the status of unicorn companies, defined as those with a valuation exceeding $1 billion, can be dynamic. Companies may transition out of unicorn status due to factors such as going public or experiencing a decrease in valuation. This fluidity introduces potential biases into our dataset. As the unicorn landscape evolves over time, periodic updates and considerations for these status changes are essential. Acknowledging these methodological nuances is crucial for a nuanced interpretation of the data, as it reflects the dynamic nature of the startup ecosystem.</li>
+</ul>
+<hr>
+</section>
+<section id="interesting-questions" class="level2">
+<h2 class="anchored" data-anchor-id="interesting-questions">Interesting Questions</h2>
+<ol type="1">
+<li><p>From which country does the largest number of unicorns originate?</p></li>
+<li><p>What is the correlation between GDP and the presence of unicorns in a region?</p></li>
+<li><p>Within the startup landscape, which industry exhibits the highest number of emerging unicorns?</p></li>
+<li><p>During which specific years did the majority of unicorns enter the market?</p></li>
+<li><p>How has the COVID-19 pandemic impacted the growth and trajectory of unicorns?</p></li>
+<li><p>How many unicorns have women as founders or co-founders?</p></li>
+<li><p>Is there a relationship between a Country’s growth rate and startup success?</p></li>
+<li><p>During which phase of the economic cycle is it most advantageous to initiate a new company?</p></li>
+<li><p>Which nations boast the highest number of female founders among unicorn startups?</p></li>
+<li><p>In terms of unicorn startups, which countries exhibit the highest percentage of female founders?</p></li>
+<li><p>Which City is favourable for the particular type of Industry ?</p></li>
+</ol>
+</section>
+<section id="important-visualisations" class="level2">
+<h2 class="anchored" data-anchor-id="important-visualisations">Important Visualisations</h2>
+<section id="which-country-to-choose-to-start-a-startup" class="level3">
+<h3 class="anchored" data-anchor-id="which-country-to-choose-to-start-a-startup"><strong>Which Country to choose to start a Startup?</strong></h3>
+</section>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"><img src="unicorn_country.png" class="img-fluid"></h2>
+<pre><code>##### **USA** and **China** are the countries containing most of the unicorns.</code></pre>
+<section id="gdp-relation-with-unicorn" class="level3">
+<h3 class="anchored" data-anchor-id="gdp-relation-with-unicorn"><strong>GDP relation with unicorn</strong></h3>
+<p><img src="world_map.png" class="img-fluid"></p>
+<ul>
+<li>There is Positive correlation between GDP and the presence of unicorns in a region</li>
+<li>Unicorns mostly emerge from developed countries with India and China being an exception.</li>
+</ul>
+</section>
+</section>
+<section id="industry-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="industry-analysis">Industry Analysis</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>In this plot we can see that the most number of unicorns in the world are in the Enterprise Tech Industry.</p>
+<p><img src="Industry_year.png" class="img-fluid"></p>
+<p>Here we can clearly see that most Unicorns were in the Consumer &amp; Retail before 2020. However post-COVID the number of unicorns in the Enterprise Tech rise. We have seen a shift of Industry as the silicon valley and many other tech hubs in the world have become popular. The growth of the other industries has been uniform.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 3
+  Industry                     Avg median
+  &lt;chr&gt;                      &lt;dbl&gt;  &lt;dbl&gt;
+1 Consumer &amp; Retail           2.68   1.5 
+2 Enterprise Tech             2.80   1.6 
+3 Financial Services          3.55   1.9 
+4 Healthcare &amp; Life Sciences  2.32   1.5 
+5 Industrials                 3.23   1.5 
+6 Insurance                   2.21   2   
+7 Media &amp; Entertainment       6.65   1.73</code></pre>
+</div>
+</div>
+<p>The mean and median valuation of Various industries are shown in billions.</p>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggExtra' was built under R version 4.3.2</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>According to the plot, most unicorns have raised a Equity of around 500 million and have a valuation of 2.5 billion dollars. Here the colours represent the stages (The “series of funding” refers to the various stages or rounds of investment that a startup or a company goes through to raise capital from external sources)</p>
+<ol type="1">
+<li><p><strong>Seed Funding</strong>:</p>
+<ul>
+<li>Seed: Funding used to validate the product, develop a business model, and potentially start early-stage production.</li>
+</ul></li>
+<li><p><strong>Series A, B, C, and Beyond</strong>:</p>
+<ul>
+<li><p>Series A: Follows the seed round and is used to scale the business, expand operations, and further develop products or services.</p></li>
+<li><p>Series B, C, and subsequent rounds: Successive funding rounds that continue to support the company’s growth, market expansion, acquisitions, or preparing for an IPO (Initial Public Offering).</p></li>
+</ul></li>
+<li><p><strong>Late-Stage Rounds</strong>:</p>
+<ul>
+<li>IPO: The initial sale of a company’s stock to the public market.</li>
+</ul></li>
+<li><p><strong>Acquired:</strong></p>
+<ul>
+<li>When the company is bought out by a bigger company.</li>
+</ul></li>
+</ol>
+</section>
+<section id="growth-rate-and-its-impact-on-unicorns." class="level2">
+<h2 class="anchored" data-anchor-id="growth-rate-and-its-impact-on-unicorns.">Growth rate and it’s impact on Unicorns.</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1048</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The Growth rate pre-COVID has been fairly even for all countries and doesn’t impact the number of unicorns to a great extent. However it is very counter-intuitive to see that we then growth rate for all countries was negative we have the most number of unicorns being formed. One expects that when the country’s economy is down it is bad for business but the data shows otherwise.</p>
+</section>
+<section id="month-wise-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="month-wise-analysis">Month-wise Analysis</h2>
+<p><img src="month_unicorn.png" class="img-fluid"></p>
+<p>Most Unicorns form in the second-fiscal (April, May, June). Also most of them form in the starting of the fiscal quarter (January, April, October) in the third fiscal quarter the distribution is fairly even.</p>
+<p>The fiscal quarter is a three month period. At the end of each quarter every company files a quarterly report with the government’s financial institution. This report helps the investors to make decision about their investments.</p>
+<p>This is a possible explanation of the trend observed.</p>
+</section>
+<section id="analysis-of-indian-unicorns" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-of-indian-unicorns">Analysis of Indian Unicorns</h2>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Most Unicorns in India are Private and most start-ups take 5-6 years to become a Unicorn.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Most Unicorns in India belong to the Consumer Service, Enterprise-tech and Fin-tech.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The Unicorns with highest Valuation come from Bengaluru and the most funding was raised from Delhi NCR.</p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1.5</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="Report_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<pre><code></code></pre>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Female_distribution.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">The above plot shows us that the countries with most female contribution to unicorns is Vietnam and Lithuania. Countries like India and US although have a lot of Unicorn start-ups, have low share of female founder/co-founder.</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<ul>
+<li><p>Most unicorns emerge from the US and China.</p></li>
+<li><p>There’s a positive correlation between the GDP of a country and the number of unicorns.</p></li>
+<li><p>Most unicorns emerge from developed countries but India and China are the exceptions to this.</p></li>
+<li><p>Max number of unicorns emerge from the Enterprise Tech industry.</p></li>
+<li><p>The Industries with the most valuation are Media &amp; Entertainment and Financial Services.</p></li>
+<li><p>Before COVID Consumer and Retail had the highest number of unicorns, after Covid Enterprise-Tech emerged as the industry having the most number of unicorns.</p></li>
+<li><p>Unicorns emerged during the COVID period despite the economy of the country being down.</p></li>
+<li><p>Countries having the most share of female-led startups are Vietnam and Lithuania.</p></li>
+</ul>
+</section>
+<section id="references" class="level2">
+<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li>CB Insights
+<ul>
+<li><a href="https://www.cbinsights.com/research-unicorn-companies" class="uri">https://www.cbinsights.com/research-unicorn-companies</a></li>
+</ul></li>
+<li>Wikipedia
+<ul>
+<li><a href="https://en.m.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)" class="uri">https://en.m.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)</a></li>
+</ul></li>
+<li>Insider
+<ul>
+<li><a href="https://insider.finology.in/business/indian-unicorns-losing" class="uri">https://insider.finology.in/business/indian-unicorns-losing</a></li>
+<li><a href="https://golden.com/query/list-of-founders-of-unicorn-companies-GNEZ" class="uri">https://golden.com/query/list-of-founders-of-unicorn-companies-GNEZ</a></li>
+</ul></li>
+</ul>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

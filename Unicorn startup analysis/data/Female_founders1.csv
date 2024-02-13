@@ -1,0 +1,126 @@
+company_name,Valuation,Country,State,City,Started,Founders,Industries,employees,Funding,investors
+,,,,,,,,,,
+1) Canva, $40.00B (January 2018), Australia, New South Wales, Surry Hills, 2012," Cameron Adams, Cliff Obrecht, Melanie Perkins"," Graphic Design, Photo Editing, Publishing, Software, Web Design"," 500-1,000", 16, 36
+2) Xiaohongshu, $20.00B (March 2016), China, Shanghai, Shanghai, 2013," Charlwin Mao Wenchao, Miranda Qu"," E-Commerce, Mobile Apps, Shopping, Social"," 1,000-5,000", 8, 10
+3) Faire, $12.59B (October 2019), United States, California, San Francisco, 2017," Daniele Perito, Jeffrey Kolovson, Lauren Cooks Levitan, Marcelo Cortes, Max Rhodes"," E-Commerce, Marketplace, Retail, Retail Technology, Wholesale"," 500-1,000", 11, 17
+4) Deel, $12.00B (April 2021), United States, California, San Francisco, 2018," Alex Bouaziz, Ofer Simon, Shuo Wang"," FinTech, Human Resources, Recruiting", 250-500, 6, 39
+5) Talkdesk, $10.00B (October 2018), United States, California, San Francisco, 2011," Cristina Fonseca, Tiago Paiva"," Cloud Computing, CRM, Customer Service, SaaS"," 1,000-5,000", 8, 17
+6) Flexport, $8.00B (April 2018), United States, California, San Francisco, 2013, Ryan Petersen," Freight Service, Logistics, Shipping, Supply Chain Management"," 1,000-5,000", 17, 79
+7) Scale AI, $7.30B (August 2019), United States, California, San Francisco, 2016," Alexandr Wang, Lucy Guo"," Artificial Intelligence, Image Recognition, Machine Learning, SaaS", 250-500, 8, 28
+8) Automation Anywhere, $6.80B (July 2018), United States, California, San Jose, 2003," Ankur Kothari, Mihir Shukla, Neeti Mehta, Rushabh Parmani"," Artificial Intelligence, Enterprise Software, Machine Learning, SaaS, Software"," 1,000-5,000", 14, 18
+9) 1Password, $6.80B (July 2021), Canada, Ontario, Toronto, 2005," Dave Teare, Natalia Karimov, Roustem Karimov, Sara Teare"," Cyber Security, Network Security, Privacy, Software", 250-500, 3, 28
+10) Upgrade, $6.28B (February 2018), United States, California, San Francisco, 2016," Adelina Grozdanova, Jeff Bogan, Matt Wierman, Renaud Laplanche, Soul Htite, Visar Nimani"," Banking, Credit, Financial Services, FinTech, Mobile", 250-500, 8, 27
+11) Lyra Health, $5.85B (August 2020), United States, California, Burlingame, 2015," Bob Kocher, David Ebersman, Dena Bravata"," Employee Benefits, Health Care, Information Services, Information Technology"," 500-1,000", 8, 25
+12) Cityblock Health, $5.70B (December 2020), United States, New York, Brooklyn, 2017," Bay Gross, Iyah Romm, Mat Balez, Toyin Ajayi"," Communities, Health Care, Social", 250-500, 8, 33
+13) Mambu, $5.50B (January 2021), Netherlands, , Amsterdam, 2011," Eugene Danilkis, Frederik Pfisterer, Sofia Nunes"," Banking, Financial Services, FinTech, Lending, SaaS"," 500-1,000", 7, 10
+14) Airwallex, $5.50B (March 2019), Australia, Victoria, Melbourne, 2015," Jack Zhang, Jacob Dai, Lucy Yueting Liu, Max Li"," Finance, Financial Services, FinTech, Payments"," 1,000-5,000", 11, 20
+15) 6Sense, $5.20B (March 2021), United States, California, San Francisco, 2013," Amanda Kahlow, Dustin Chang, Premal Shah, Shane Moriah, Viral Bajaria"," Big Data, Business Information Systems, Marketing, Sales Automation"," 500-1,000", 7, 18
+16) Hello TransTech, $5.00B (June 2018), China, Shanghai, Shanghai, 2016," Han Mei, Jiang Wei, Li Kaizhu, Yang Lei"," Apps, Cycling, Last Mile Transportation, Ride Sharing, Travel"," 1,000-5,000", 8, 8
+17) Horizon Robotics, $5.00B (February 2019), China, Beijing, Beijing, 2015," Annie Tao, Chang Huang, Kai Yu, Ming Yang"," Artificial Intelligence, Autonomous Vehicles, Machine Learning, Robotics", 250-500, 9, 43
+18) ZEPZ, $5.00B (August 2021), United Kingdom, England, London, 2010," Catherine Wines, Ismail Ahmed, Richard Igoe"," Financial Services, FinTech, Mobile Payments"," 500-1,000", 12, 9
+19) OfBusiness, $5.00B (July 2021), India, , Gurgaon, 2015," Asish Mohapatra, Bhuvan Gupta, Ex Chandranshu Sinha, Nitin Jain, Ruchi Kalra, Srinath Ramakkrushnan, Vasant Sridhar"," Financial Services, FinTech, Infrastructure, Lending, Small and Medium Businesses"," 500-1,000", 11, 17
+20) Vinted, $4.53B (November 2019), Lithuania, , Vilnius, 2008," Justas Janauskas, Mantas Mikuckas, Milda Mitkute, Sjuul Berden"," E-Commerce, Fashion, Internet, Marketplace, Mobile"," 500-1,000", 6, 9
+21) VIPKid, $4.50B (August 2016), China, Beijing, Beijing, 2013," Cindy Mi, Jessie Chen, Victor Zhang"," E-Learning, Education, Internet, Online Portals, Primary Education"," 5,000-10,000", 10, 12
+22) Guild Education, $4.40B (November 2019), United States, Colorado, Denver, 2015," Brittany Stich, Chris Romer, Rachel Carlson"," Career Planning, EdTech, Education, Employee Benefits", 250-500, 7, 25
+23) Arctic Wolf Networks, $4.30B (October 2020), United States, Minnesota, Eden Prairie, 2012," Brian NeSmith, Kim Tremblay"," Cyber Security, Information Technology, Network Security, Software"," 500-1,000", 8, 15
+24) Globalization Partners, $4.20B (January 2022), United States, Massachusetts, Boston, 2012, Nicole Sahin," Compliance, Employment, Human Resources, Information Technology", 100-250, 2, 4
+25) SSENSE, $4.15B (June 2021), Canada, Quebec, Montreal, 2003," Bassel Atallah, Firas Atallah, Rami A"," E-Commerce, Fashion, Retail", 50-100, 1, 1
+26) Houzz, $4.00B (September 2014), United States, California, Palo Alto, 2008," Adi Tatarko, Alon Cohen"," Architecture, Home Improvement, Home Renovation, Interior Design, Smart Home"," 1,000-5,000", 8, 22
+27) Papaya Global, $3.70B (March 2021), United States, New York, New York, 2016," Eynat Guez, Ofer Herman, Ruben Drong"," Data Integration, Employment, Human Resources, Recruiting, SaaS", 250-500, 7, 15
+28) Starburst, $3.35B (January 2021), United States, Massachusetts, Boston, 2017," Anu Sudarsan, Dain Sundstrom, David Phillips, Grzegorz Kokosiński, Justin Borgman, Kamil Bajda-Pawlikowski, Karol Sobczak, Martin Traverso, Matt Fuller, Piotr Findeisen, Wojciech Biela"," Analytics, Big Data, Information Technology, Open Source", 250-500, 4, 7
+29) Starling Bank, $3.34B (March 2021), United Kingdom, England, London, 2014, Anne Boden," Banking, Financial Services, FinTech"," 500-1,000", 10, 11
+30) Kurly, $3.30B (July 2021), South Korea, , Seoul, 2014, Sophie Kim," Consumer, E-Commerce, Food and Beverage, Food Delivery, Online Portals", 250-500, 8, 14
+31) Skims, $3.20B (April 2021), United States, California, Los Angeles, 2019," Jens Grede, Kim Kardashian"," Fashion, Lingerie, Retail", 250-500, 3, 5
+32) LaunchDarkly, $3.00B (July 2021), United States, California, Oakland, 2014," Edith Harbaugh, John Kodumal"," Developer Tools, Software, Test and Measurement", 250-500, 9, 13
+33) Lucid Software, $3.00B (June 2021), United States, Utah, South Jordan, 2010, Reiko Kinomoto," SaaS, Software, Telecommunications", 1-10, 2, 
+34) BlockFi, $3.00B (March 2021), United States, New Jersey, Jersey City, 2017," Flori Marquez, Zac Prince"," Bitcoin, Blockchain, Consumer Lending, Cryptocurrency, FinTech"," 500-1,000", 16, 49
+35) Loft, $2.90B (January 2020), Brazil, , Sao Paulo, 2018," Florian Hagenbuch, Gustavo D. Saraiva, João Vianna, Kristian Huber, Marcus Vinicius Grigoletto, Mariana Paixao, Mate Pencz"," Marketplace, Property Management, Real Estate"," 500-1,000", 7, 43
+36) DriveWealth, $2.85B (August 2021), United States, New Jersey, Chatham, 2012," Julie Coin, Robert Cortright"," Cloud Infrastructure, Developer APIs, Financial Services, FinTech", 250-500, 5, 19
+37) Zipline, $2.80B (May 2019), United States, California, South San Francisco, 2014," Jeremy Baker, Melissa Wong"," Business Development, Communications Infrastructure, Information Technology, Retail, Retail Technology, SaaS, Software", 50-100, 3, 8
+38) Side, $2.50B (March 2021), United States, California, San Francisco, 2017," Edward Wu, Guy Gal, Hilary Saunders"," Real Estate, Real Estate Investment, Sales", 250-500, 6, 13
+39) HoneyBook, $2.40B (May 2021), United States, California, San Francisco, 2013," Dror Shimoni, Naama Alon, Oz Alon, Shadiah Sigala"," Apps, Financial Services, FinTech, SaaS", 100-250, 9, 29
+40) MoMo, $2.27B (December 2021), Vietnam, , Ho Chi Minh City, 2013," Lei Xiaoliang, Sic Zhang, Tang Yan"," Agriculture, Content, E-Commerce, Energy, Internet of Things, Medical, Mobile Apps, Nursing and Residential Care, Security, SMS"," 500-1,000", 9, 11
+41) Pattern, $2.25B (October 2021), United States, Utah, Lehi, 2013," David Wright, Melanie Alder"," Digital Marketing, E-Commerce, Logistics, Marketplace, Retail Technology"," 500-1,000", 2, 5
+42) Zume, $2.25B (November 2018), United States, California, Mountain View, 2015," Alex Garden, Julia Collins"," Consumer, Food and Beverage, Food Delivery, Manufacturing", 100-250, 7, 10
+43) Medable, $2.10B (October 2021), United States, California, Palo Alto, 2013," James Sas, Michelle Longmire, Perry Robinson, Tim Smith"," Medical Device, Messaging, Pharmaceutical", 250-500, 7, 12
+44) Divvy Homes, $2.00B (August 2021), United States, California, San Francisco, 2017," Adena Hefets, Alex Klarfeld, Brian Ma, Nicholas Clark"," Financial Services, Real Estate, Rental Property", 50-100, 7, 16
+45) Spring Health, $2.00B (September 2021), United States, New York, New York, 2016," Abhishek Chandra, Adam Chekroud, April Koh"," Artificial Intelligence, Health Care, Machine Learning, Outpatient Care", 250-500, 6, 21
+46) LTK, $2.00B (November 2021), United States, Texas, Dallas, 2011," Amber Venz Box, Baxter Box"," Digital Media, Fashion, Internet, Retail", 250-500, 3, 3
+47) Aviatrix, $2.00B (September 2021), United States, California, Santa Clara, 2014, Sherry Wei," Cloud Infrastructure, Enterprise Software, Information Technology, Security, Software", 250-500, 6, 12
+48) VerbIT, $2.00B (June 2021), United States, New York, New York, 2016," Kobi Ben Tzvi, Sivan Cohen Pur, Tom Livne"," Artificial Intelligence, Machine Learning, Natural Language Processing, SEO", 100-250, 9, 23
+49) KRY, $2.00B (April 2021), Sweden, , Stockholm, 2014," Fredrik Jung Abbou, Joachim Hedenius, Johannes Schildt, Josefin Landgård"," Consumer, Health Care, Medical, mHealth, Mobile Apps"," 500-1,000", 6, 8
+50) Clearco, $2.00B (April 2021), Canada, Ontario, Toronto, 2015," Andrew D'Souza, Ben Sanders, Charlie Feng, Ivan Gritsiniak, Michele Romanow, Olivier Grinda, Pavel Melnichuk, Tanay Delima"," E-Commerce, Financial Services, FinTech, Internet, Venture Capital", 250-500, 5, 29
+51) 4Paradigm, $2.00B (December 2018), China, Beijing, Beijing, 2015," Feng Tian, Qiang Yang, Shiwei Hu, Wenyuan Dai, Yuqiang Chen"," Artificial Intelligence, Information Services, Machine Learning, Software"," 500-1,000", 9, 37
+52) Orca Security, $1.80B (March 2021), United States, Oregon, Portland, 2019," Avi Shua, Ety Spiegel Hubara, Gil Geron, Hadas Amitay, Liran Antebi, Matan Ben-Gur, Shay Filosof, Wagde Zabit"," Cloud Security, Compliance, Cyber Security, Information Technology, SaaS", 250-500, 5, 17
+53) Trulioo, $1.75B (June 2021), Canada, British Columbia, Vancouver, 2011," Stephen Ufford, Tanis Jorge"," Big Data, Compliance, Finance, Identity Management, Security"," 500-1,000", 8, 15
+54) Reltio, $1.70B (November 2021), United States, California, Redwood City, 2011," Anastasia Zamyshlyaeva, Manish Sood"," Analytics, Data Integration, PaaS, SaaS", 250-500, 5, 7
+55) ZenBusiness, $1.70B (November 2021), United States, Texas, Austin, 2015," JC Glancy, Rafael Lopez, Ross Buhrdorf, Ryan Pitylak, Shanaz Hemmati"," Business Development, Business Information Systems, Internet", 250-500, 7, 20
+56) Vestiaire Collective, $1.70B (March 2021), France, , Paris, 2009," Alexandre Cognard, Christian Jorge, Fanny Moizant, Henrique Fernandes, Sebastien Fabre, Sophie Hersan"," E-Commerce, E-Commerce Platforms, Fashion, Marketplace, Social Shopping"," 500-1,000", 9, 17
+57) ezCater, $1.60B (April 2019), United States, Massachusetts, Boston, 2007," Briscoe Rodgers, Stefania Mallett"," Catering, Food and Beverage, Hospitality, Marketplace", 250-500, 11, 25
+58) Baiwang, $1.55B (March 2019), China, Beijing, Beijing, 2015, Chen Jie," Business Information Systems, Business Intelligence, Financial Exchanges, Financial Services, FinTech", 1-10, 2, 5
+59) Loom, $1.53B (May 2021), United States, California, San Francisco, 2016," Erica Chidi, Quinn Lundberg"," Health Care, Medical, Wellness", 1-10, 1, 11
+60) Athelas, $1.50B (January 2022), United States, California, Mountain View, 2016," Deepika Bodapati, Tanay Tandon"," Biotechnology, Health Care, Life Science", , 4, 16
+61) Zenoti, $1.50B (December 2020), United States, Washington, Bellevue, 2010," Dheeraj Koneru, Saritha Katikaneni, Sudheer Koneru"," Billing, Cloud Data Services, CRM, Enterprise Software, Marketing, Point of Sale, SaaS, Scheduling, Software", 250-500, 7, 6
+62) Mu Sigma, $1.50B (February 2013), United States, Illinois, Northbrook, 2004," Ambiga Subramanian, Dhiraj C Rajaram"," Analytics, Business Information Systems, Information Services, Information Technology, Software"," 1,000-5,000", 7, 4
+63) Paradox, $1.50B (December 2021), United States, Arizona, Scottsdale, 2016," Aaron Matos, Olivia Matos"," Artificial Intelligence, Human Resources, Information Technology, Machine Learning", 250-500, 4, 13
+64) Il Makiage, $1.50B (January 2022), United States, New York, New York, 2018," Ilana Harkavi, Oran Holtzman, Shiran Holtzman Erel"," Beauty, E-Commerce, Lifestyle, Retail Technology", 100-250, 1, 1
+65) Andela, $1.50B (September 2021), United States, New York, New York, 2014," Brice Steven Nkengsa, Christina Sass, Ian Carnevale, Iyinoluwa Aboyeji, Jeremy Johnson, Nadayar Enegesi"," B2B, Consulting, Human Resources, Information Technology, Software"," 1,000-5,000", 10, 45
+66) Inari, $1.50B (May 2021), United States, Massachusetts, Cambridge, 2016," David Berry, Ignacio Martinez, Laura Lande-Diner"," Agriculture, AgTech, Biotechnology", 100-250, 4, 11
+67) TuJia, $1.50B (June 2015), China, Beijing, Beijing, 2011," Luo Jun, Melissa Yang"," Apps, Customer Service, Internet, Tourism, Travel"," 1,000-5,000", 5, 12
+68) Juma Peisong, $1.45B (November 2018), China, Sichuan, Chengdu, 2011, Rubing Bai, Logistics," 1,000-5,000", 2, 2
+69) Einride, $1.44B (December 2021), Sweden, , Stockholm, 2016," Filip Lilja, Linnea Kornehed, Robert Falck"," Autonomous Vehicles, Electric Vehicle, Logistics, Transportation", 100-250, 7, 15
+70) Justworks, $1.43B (January 2020), United States, New York, New York, 2012," Iris Ramos, Isaac Oates"," B2B, Compliance, Employee Benefits, Health Insurance, Human Resources, Internet, Payments, Software"," 500-1,000", 6, 15
+71) Pristyn Care, $1.40B (December 2021), India, , Gurugram, 2018," Garima Sawhney, Harsimarbir (Harsh) Singh, Vaibhav Kapoor"," Health Care, Hospital, Internet"," 500-1,000", 5, 13
+72) Away, $1.40B (May 2019), United States, New York, New York, 2015," Jen Rubio, Steph Korey"," Consumer, Consumer Goods, E-Commerce, Lifestyle, Retail, Travel"," 500-1,000", 6, 21
+73) Scalable Capital, $1.40B (June 2021), Germany, , Munich, 2014," Adam French, Erik Podzuweit, Florian Prucker, Manuela Rabener, Patrick Poschl, Simon Miller, Stefan Mittnik"," Asset Management, Financial Services, FinTech", 250-500, 6, 10
+74) WTOIP, $1.27B (April 2018), China, Guangdong, Guangzhou, 2013, Amy Chan," Business Development, Financial Services, Internet, Property Management"," 1,000-5,000", 4, 9
+75) Kuaikan Manhua, $1.25B (December 2017), China, Beijing, Beijing, 2014," Anni Chen, Runchao Li, Ye Mingxiang"," Art, Comics, Digital Media, E-Commerce, Marketplace, Media and Entertainment", 50-100, 6, 12
+76) Honor Technology, $1.25B (October 2021), United States, California, San Francisco, 2014," Cameron Ring, Monica Lo, Sandy Jen, Seth Sternberg"," Elder Care, Health Care, Home Health Care, Medical"," 500-1,000", 6, 31
+77) EQRx, $1.23B (January 2021), United States, Massachusetts, Cambridge, 2020," Alexis Borisy, Peter Bach, Sandra Horning"," Biotechnology, Health Care, Medical, Pharmaceutical", 250-500, 3, 21
+78) AgentSync, $1.20B (December 2021), United States, Colorado, Denver, 2018," Jenn Knight, Niranjan Sabharwal"," Compliance, Information Technology, Insurance, SaaS, Sales, Software", 100-250, 4, 19
+79) Glossier, $1.20B (March 2019), United States, New York, New York, 2014, Emily Weiss," Beauty, Consumer Goods, Fashion", 100-250, 6, 19
+80) MyGlamm, $1.20B (November 2021), India, , Mumbai, 2015," Darpan Sanghvi, Priyanka Gill"," Beauty, Cosmetics, Marketplace, Mobile Apps", 250-500, 12, 19
+81) LivSpace, $1.20B (February 2022), India, , Bengaluru, 2015," Anuj Srivastava, Ramakant Sharma, Shagufta Anurag"," E-Commerce, Furniture, Interior Design"," 1,000-5,000", 10, 20
+82) Jokr, $1.20B (December 2021), United States, New York, New York, 2021," Aspa Lekka, Benjamin Bauer, German Peralta, Konstantin Sorger, Piotr Lagowski, Ralf Wenzel, Sven Grajetzki"," Delivery, Delivery Service, Grocery, Local Shopping, Retail", 100-250, 2, 15
+83) Modern Health, $1.17B (February 2021), United States, California, San Francisco, 2017," Alyson Watson, Erica Johnson"," Health Care, mHealth, Therapeutics, Wellness", 100-250, 6, 20
+84) Rebellion Defense, $1.15B (September 2021), United States, DC, Washington, 2019," Chris Lynch, Nicole Camarillo, Oliver Lewis"," Artificial Intelligence, Machine Learning, Software", 100-250, 2, 5
+85) Firefly Aerospace, $1.10B (May 2021), United States, Texas, Cedar Park, 2014," Eric Salwan, Maureen Gannon, Max Polyakov, Michael Blum, PJ King, Thomas Markusic"," Aerospace, Air Transportation, Satellite Communication, Space Travel", 250-500, 7, 11
+86) Daily Harvest, $1.10B (November 2021), United States, New York, New York, 2014, Rachel Drori," E-Commerce, Food and Beverage, Food Delivery, Organic Food, Subscription Service", 100-250, 6, 24
+87) LEAD School, $1.10B (January 2022), India, , Andheri, 2012," Smita Deorah, Sumeet Mehta"," E-Learning, EdTech, Education, Secondary Education"," 500-1,000", 5, 3
+88) Sunbit, $1.10B (May 2021), United States, California, Los Angeles, 2016," Arad Levertov, Ornit Dweck-Maizel, Tal Riesenfeld, Tamir Hazan"," E-Commerce, Finance, FinTech, Retail", 100-250, 7, 17
+89) Acko General Insurance, $1.10B (October 2021), India, , Bengaluru, 2016," Ruchi Deepak, Varun Dua"," Auto Insurance, Health Insurance, Insurance, InsurTech", 250-500, 6, 21
+90) Mamaearth, $1.07B (December 2021), India, , Gurgaon, 2016," Ghazal Alagh, Varun Alagh"," E-Commerce, Health Care, Retail, Wellness", 250-500, 7, 10
+91) Rivigo, $1.07B (July 2019), India, , Gurgaon, 2014," Deepak Garg, Gazal Kalra"," Automotive, Freight Service, Logistics, Shipping, Software, Transportation"," 1,000-5,000", 11, 7
+92) Branch, $1.05B (September 2018), United States, California, Redwood City, 2014," Alex Austin, Dmitri Gaskin, Mada Seghete, Mike Molinet"," App Marketing, Mobile Advertising, Mobile Apps, Software", 250-500, 8, 18
+93) Masterworks, $1.00B (October 2021), United States, New York, New York, 2017, Scott Lynn," Art, Financial Services", 50-100, 1, 3
+94) Stytch, $1.00B (November 2021), United States, California, San Francisco, 2020," Julianna Lamb, Reed McGinley-Stempel"," Developer APIs, Software, UX Design", 10-50, 3, 11
+95) Minio, $1.00B (January 2022), United States, California, Palo Alto, 2014," Anand Babu Periasamy, Frederick Kautz, Garima Kapoor, Harshavardhana ."," Big Data, Cloud Storage, Data Center, Internet, Open Source, Software", 10-50, 3, 17
+96) Interos, $1.00B (July 2021), United States, Virginia, Arlington, 2005, Jennifer Bisceglie," Artificial Intelligence, Cyber Security, Risk Management, SaaS, Supply Chain Management", 250-500, 4, 5
+97) Tezign, $1.00B (November 2021), China, Shanghai, Shanghai, 2015," Daisy Guo, Ling Fan, Zhe Wang"," Animation, Content Marketing, Graphic Design, Marketing, SaaS, Software", 250-500, 6, 10
+98) Shippo, $1.00B (June 2021), United States, California, San Francisco, 2013," Laura Behrens Wu, Max M. Diez, Simon Kreuz"," B2B, E-Commerce, Logistics, Software, Supply Chain Management", 100-250, 10, 20
+99) Sidecar Health, $1.00B (January 2021), United States, California, El Segundo, 2018," Patrick Quigley, Veronica Osetinsky"," FinTech, Health Care, Health Insurance, Insurance, InsurTech", 50-100, 3, 11
+100) Momenta, $1.00B (October 2018), China, Beijing, Beijing, 2016," Gang Sun, Shaoqing Ren, Xudong Cao, Yan Xia"," Artificial Intelligence, Autonomous Vehicles, Computer Vision, Mapping Services, Software", 250-500, 12, 23
+101) Snorkel AI, $1.00B (August 2021), United States, California, Palo Alto, 2019," Alexander Ratner, Braden Hancock, Chris Re, Henry Ehrenberg, Paroma Varma"," Artificial Intelligence, Enterprise Software, Machine Learning, SaaS", 50-100, 5, 13
+102) Maven Clinic, $1.00B (August 2021), United States, New York, New York, 2014," Katherine Ryder, Suzie Grange"," Family, Health Care, mHealth", 250-500, 7, 34
+103) Xendit, $1.00B (September 2021), Indonesia, , Jakarta, 2014," Bo Chen, Juan Gonzalez, Moses Lo, Tessa Wijaya"," Banking, Finance, Financial Services, FinTech, Payments"," 500-1,000", 6, 9
+104) Hailo, $1.00B (June 2021), Israel, , Tel Aviv, 2017," Avi Baum, Hadar Zeitlin, Orr Danon"," Artificial Intelligence, Augmented Reality, Embedded Systems, Hardware, Semiconductor", 100-250, 6, 17
+105) Ajaib, $1.00B (October 2021), Indonesia, , Jakarta, 2018," Anderson Sumarli, Yada Piyajomkwan"," Finance, Financial Services, FinTech, Trading Platform", 100-250, 5, 13
+106) MobiKwik, $1.00B (October 2021), India, , Haryana, 2009," Bipin Singh, Chandan Joshi, Upasana Taku"," Consumer Lending, Financial Services, FinTech, Lending, Mobile Payments, Payments, Wealth Management", 250-500, 16, 27
+107) Evidation, $1.00B (March 2021), United States, California, San Mateo, 2012," Alessio Signorini, Christine Lemke, Luca Foschini, Mikki Nasch"," Analytics, Big Data, Health Care, Medical, Mobile Apps, Software", 250-500, 10, 17
+108) Mobvoi, $1.00B (April 2017), China, Beijing, Beijing, 2012," Yizhou Zhu, Yuanyuan Li, Zhifei Li"," Artificial Intelligence, Internet, Mobile, Natural Language Processing", 250-500, 6, 5
+109) Mammoth Biosciences, $1.00B (September 2021), United States, California, Brisbane, 2017," Ashley Tehranchi, Janice Chen, Jennifer Doudna, Lucas Harrington, Trevor Martin"," Biotechnology, Genetics, Health Diagnostics, Life Science", 100-250, 7, 26
+110) iCarbonX, $1.00B (April 2016), China, Guangdong, Shenzhen, 2015," Chun Wu, Hao Li, Jun Wang, Yingrui Li"," Artificial Intelligence, Biotechnology, Health Care, Machine Learning", 100-250, 2, 3
+111) Savage X Fenty, $1.00B (March 2021), United States, California, El Segundo, 2018, Robyn Rihanna Fenty," E-Commerce, Fashion, Lingerie", 100-250, 4, 12
+112) Shift Technology, $1.00B (May 2021), France, , Paris, 2014," Christian Ohler, George Arison, Joel Washington, Minnie Ingersoll, Morgan Knutson"," Automotive, E-Commerce, Internet, Logistics, Marketplace, Retail Technology"," 500-1,000", 10, 23
+113) PatSnap, $1.00B (March 2021), Singapore, , , 2007," Guan Dian, Jeffrey Tiong, Ray Chohan"," Analytics, Artificial Intelligence, Business Intelligence"," 500-1,000", 6, 12
+114) Yunxuetang, $1.00B (March 2021), China, Jiangsu, Suzhou, 2011," Jane Ding, Ruize Lu"," Corporate Training, Professional Services, Software"," 500-1,000", 8, 12
+115) EcoFlow, $1.00B (June 2021), China, Guangdong, Shenzhen, 2017," Eli Harris, Fan Zheng, Hannah Sieber, Lei Wang"," Clean Energy, Consumer Electronics, Electronics, Energy, Energy Efficiency, Solar", 250-500, 4, 13
+116) Kendra Scott, $1.00B (December 2016), United States, Texas, Austin, 2002, Kendra Scott," Fashion, Jewelry"," 500-1,000", 2, 2
+117) LinkDoc Technology, $1.00B (July 2018), China, Beijing, Beijing, 2014," Ligang Luo, Liping Li, Shan He, Tony Zhang"," Big Data, Security", 50-100, 4, 9
+118) Razor, $1.00B (November 2021), Germany, , Berlin, 2020," Christoph F. Gamon, Jonas Diezun, Oliver Dlugosch, Shrestha Chowdhury, Tushar Ahluwalia"," Brand Marketing, Business Development, E-Commerce, Internet, Retail", 100-250, 8, 12
+119) InFarm, $1.00B (December 2021), Germany, , Berlin, 2013," Erez Galonska, Guy Galonska, Osnat Michaeli"," Agriculture, AgTech, Internet of Things, Machine Learning", 250-500, 10, 22
+120) Claroty, $1.00B (June 2021), United States, New York, New York, 2015," Amir Zilberstein, Benny Porat, Galina Antova"," Cyber Security, Industrial, Network Security, Security", 250-500, 5, 21
+121) Heyday, $1.00B (November 2021), United States, Illinois, Chicago, 2020," Adam Ross, Jeni Sykes, Michael Pollak"," Beauty, Cosmetics, Health Care", 100-250, 6, 10
+122) Pat McGrath Labs, $1.00B (July 2018), United States, New York, New York, 2016, Pat McGrath, Fashion, 50-100, 2, 2
+123) WeLab, $1.00B (November 2017), Hong Kong, , , 2013," Aananth Solaiyappan, Frances Kang, Kelly Wong, Simon Loong"," Banking, Finance, Financial Services, FinTech, Personal Finance"," 500-1,000", 11, 19
+124) Zhuan Zhuan, $1.00B (April 2017), China, Beijing, Beijing, 2015," Changfeng Xiang, Jiali Wu, Lu Chen, Wei Huang"," Consumer, Consumer Goods, E-Commerce, Marketplace"," 500-1,000", 4, 7

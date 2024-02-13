@@ -1,0 +1,336 @@
+---
+title: "Unicorn Startups' Data Analysis Report"
+author: "Group 21"
+date: "11-16-2023"
+output:
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About the Data
+
+We scraped the data about the Unicorn Startups in the World from [CB Insights](https://www.cbinsights.com/research-unicorn-companies) and Wikipedia which has collected data from IMF's World economic outlook and World Bank's Data.
+
+The variables extracted are as follows:
+
+-   **Company**
+    -   *character*
+    -   Startup's name
+-   **Valuation**
+    -   *integer*
+    -   Companies' Valuation
+-   **Date Joined**
+    -   Unicorn joining *Date*
+-   **Country**
+    -   *character*
+    -   Country of origin
+-   **City**
+    -   *character*
+    -   City of origin
+-   **Industry**
+    -   *character*
+    -   Type of industry. This has been sub-classified into -Media & Entertainment -Industrials -Consumer & Retail -Financial Services -Enterprise Tech -Healthcare & Life Sciences -Insurance
+-   **Select Investors**
+    -   *Character*
+    -   Investors' Name The data consists of Unicorn Startups across different countries in decreasing order of their Valuation.
+
+The data consists of 1050 data points with 7 variables.
+This data consists of
+We also have additional variables for every country for 2021:
+
+-   Population
+-   GDP
+-   Population Density
+-   GDP Growth Rate
+
+------------------------------------------------------------------------
+
+## Obtaining the Data
+
+The data was obtained from the following sources:
+
+-   Main Data Scraped from CB Insights:
+[Link](https://www.cbinsights.com/research-unicorn-companies)
+-   Added data of GDP from Wikipedia
+[Link](https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)#References)
+
+## Biases in the Data
+- **Biases in Methodology** Our data collection methodology involves scraping information from CB Insights. It's important to note that the status of unicorn companies, defined as those with a valuation exceeding $1 billion, can be dynamic. Companies may transition out of unicorn status due to factors such as going public or experiencing a decrease in valuation. This fluidity introduces potential biases into our dataset. As the unicorn landscape evolves over time, periodic updates and considerations for these status changes are essential. Acknowledging these methodological nuances is crucial for a nuanced interpretation of the data, as it reflects the dynamic nature of the startup ecosystem.
+
+------------------------------------------------------------------------
+
+## Interesting Questions
+
+1. From which country does the largest number of unicorns originate?
+
+2. What is the correlation between GDP and the presence of unicorns in a region?
+
+3.  Within the startup landscape, which industry exhibits the highest number of emerging unicorns?
+
+4. During which specific years did the majority of unicorns enter the market?
+
+5. How has the COVID-19 pandemic impacted the growth and trajectory of unicorns?
+
+6. How many unicorns have women as founders or co-founders?
+
+7. Is there a relationship between a Country's growth rate and startup success?
+
+8. During which phase of the economic cycle is it most advantageous to initiate a new company?
+
+9. Which nations boast the highest number of female founders among unicorn startups?
+
+10. In terms of unicorn startups, which countries exhibit the highest percentage of female founders?
+
+11. Which City is favourable for the particular type of Industry ? 
+
+## Important Visualisations
+
+### **Which Country to choose to start a Startup?**
+
+![](unicorn_country.png)
+-   
+
+    ##### **USA** and **China** are the countries containing most of the unicorns.
+
+### **GDP relation with unicorn**
+
+![](world_map.png)
+
+- There is Positive correlation between  GDP and the presence of unicorns in a region
+- Unicorns mostly emerge from developed countries with India and China being an exception.
+
+
+## Industry Analysis
+
+```{r message = FALSE}
+#| echo: false
+library(tidyverse)
+library(ggplot2)
+load("./../Startup.Rdata")
+Combined_data %>% ggplot(aes(y = Industry))+
+  geom_bar(colour = 'red', fill = 'pink')+
+  labs(x = "Number of Unicorns", y = "Industries", title = "NUMBER OF UNICORNS IN EACH INDUSTRY")+
+  theme(axis.text.x = element_text(size = 14),
+        axis.text.y = element_text(size = 14),
+        plot.title = element_text(size = 18, colour = "brown"),
+        axis.title.x = element_text(size = 16, colour = 'blue'),  # Adjust x-axis label size
+        axis.title.y = element_text(size = 16, colour = 'blue'))
+
+```
+
+In this plot we can see that the most number of unicorns in the world are in the Enterprise Tech Industry.
+
+![](Industry_year.png)
+
+Here we can clearly see that most Unicorns were in the Consumer & Retail before 2020. However post-COVID the number of unicorns in the Enterprise Tech rise. We have seen a shift of Industry as the silicon valley and many other tech hubs in the world have become popular. The growth of the other industries has been uniform.
+
+```{r}
+#| warning: false
+#| echo: false
+ggplot(Combined_data, aes(x = Industry, y = Valuation...B.)) +
+  geom_boxplot(fill = c("lightblue","green","Red","pink","orange","grey","yellow"), color = "black",outlier.shape = NA) +
+  labs(x = "Industry", y = "Valuation", title = "Boxplot of Valuation by Industry") +
+  theme_bw()+ ylim(c(0,7.5))
+
+```
+
+```{r}
+#| echo: false
+table = Combined_data %>% group_by(Industry) %>% summarise(Avg = mean(Valuation...B.), median = median(Valuation...B.))
+print(table)
+```
+
+The mean and median valuation of Various industries are shown in billions.
+
+```{r}
+#| echo: false
+library(ggExtra)
+data = Found_year
+hyphen_indices <- which(data$Equity.Funding.Raised...M. == "-")
+values <- data$Equity.Funding.Raised...M.[data$Equity.Funding.Raised...M. != "-"]
+x = as.numeric(values)
+y = data$Valuation...B.[-hyphen_indices]
+
+x = c(x, rep(0,10))
+y = c(y, rep(0,10))
+
+
+data = data %>% mutate(Equity = x)
+data = data %>% mutate(Valuation = y)
+
+g =   data %>% ggplot(aes(y = Valuation, x = Equity))+
+      geom_jitter(aes(colour = Company.Stage))+
+      coord_cartesian(xlim = c(0,3000),ylim = c(0,15))+
+      theme_minimal()+ 
+      labs("Valuation vs Equity raised", x = "Equity Raised in M", y = "Valuation in B")
+    
+ggMarginal(g, type = "violin", fill = "transparent")
+```
+
+According to the plot, most unicorns have raised a Equity of around 500 million and have a valuation of 2.5 billion dollars. Here the colours represent the stages (The "series of funding" refers to the various stages or rounds of investment that a startup or a company goes through to raise capital from external sources)
+
+1.  **Seed Funding**:
+
+    -   Seed: Funding used to validate the product, develop a business model, and potentially start early-stage production.
+
+2.  **Series A, B, C, and Beyond**:
+
+    -   Series A: Follows the seed round and is used to scale the business, expand operations, and further develop products or services.
+
+    -   Series B, C, and subsequent rounds: Successive funding rounds that continue to support the company's growth, market expansion, acquisitions, or preparing for an IPO (Initial Public Offering).
+
+3.  **Late-Stage Rounds**:
+
+    -   IPO: The initial sale of a company's stock to the public market.
+
+4.  **Acquired:**
+
+    -   When the company is bought out by a bigger company.
+
+## Growth rate and it's impact on Unicorns.
+
+```{r}
+#| echo: false
+saal = rep(2013:2022,8)
+Growth_rate$year = saal
+Growth_rate %>% ggplot(aes(x = year, colour = group))+
+  geom_line(aes(y = Growth_rate))+
+  geom_line(aes(y = Annual_change), linetype = "dotted")+
+  labs(title = "Growth rate vs years for each country", caption = "Dotted lines represent annual change", x = "Years", y = "Growth rate")
+```
+
+```{r}
+#| echo: false
+
+
+length(Combined_data$Company)  
+x = character(length = 1048)
+for(i in 1:1048){
+  x[i] = strsplit(Combined_data$Date.Joined, "/")[[i]][3]
+}
+
+x = as.numeric(x)
+Combined_data = Combined_data %>% mutate(Year_joined = x)
+Combined_data %>% ggplot(aes(x = Year_joined))+
+  geom_bar() + theme_bw() + labs(title = "Number of unicorns joined per year", x = "Years", y = "Number of unicorns")
+
+```
+
+The Growth rate pre-COVID has been fairly even for all countries and doesn't impact the number of unicorns to a great extent. However it is very counter-intuitive to see that we then growth rate for all countries was negative we have the most number of unicorns being formed. One expects that when the country's economy is down it is bad for business but the data shows otherwise.
+
+## Month-wise Analysis
+
+![](month_unicorn.png)
+
+Most Unicorns form in the second-fiscal (April, May, June). Also most of them form in the starting of the fiscal quarter (January, April, October) in the third fiscal quarter the distribution is fairly even.
+
+The fiscal quarter is a three month period. At the end of each quarter every company files a quarterly report with the government's financial institution. This report helps the investors to make decision about their investments.
+
+This is a possible explanation of the trend observed.
+
+## Analysis of Indian Unicorns
+
+```{r}
+#| echo: false
+#| warning: false
+main_plot = India %>% ggplot(aes(x = Years.To.Unicorn, y = Valuation..In...Bn.))+
+  geom_jitter(aes(colour = Current.Status), size = 2)+
+  labs(y = "Valuation of Billions", x = "Years to Unicorn")
+
+ggMarginal(main_plot, type = "histogram", fill = "blue")
+
+```
+
+Most Unicorns in India are Private and most start-ups take 5-6 years to become a Unicorn.
+
+```{r}
+#| echo: false
+
+India %>% ggplot(aes(x = "", fill = Sector))+geom_bar()+coord_polar(theta = "y")+theme_minimal()+labs(title = 'Industries', x = "Number of Unicorns")
+```
+
+Most Unicorns in India belong to the Consumer Service, Enterprise-tech and Fin-tech.
+
+```{r}
+#| echo: false
+#| warning: false
+vec = gsub(",", "", India$Total.Funding..in...)
+vec = as.numeric(vec)
+
+India$Total.Funding..in... = vec
+
+India %>% ggplot(aes(x = Valuation..In...Bn., y = Total.Funding..in...))+
+  geom_point(aes(colour = Headquarters, alpha = 0.5))+labs(title = "Valuation vs Funding", x = "Valution in billions", y = "Total Funding")+
+  theme_bw()+xlim(c(0,12))+ylim(c(0,5.5e+09))
+```
+
+The Unicorns with highest Valuation come from Bengaluru and the most funding was raised from Delhi NCR.
+
+```{r}
+#| echo: false
+f_industries  = strsplit(Feamle_startups$Industries, ",")
+f_industries = unlist(f_industries)
+f_industries = as_tibble(table(f_industries))
+female_data = f_industries %>% filter(n > 3)
+
+ggplot(female_data, aes(x = "", y = n, fill = f_industries)) +
+  geom_bar(stat = "identity") +
+  coord_polar(theta = "y") +
+  theme_minimal() +
+  labs(title = "Industry Distribution")
+```
+
+```{r}
+#| echo: false
+valuation = character(length = 125)
+for(i in 1:125){
+  valuation[i] = strsplit(Feamle_startups$Valuation, " ")[[i]][2]
+}
+valuation = valuation[2:125]
+valuation = substring(valuation,2,5)
+valuation = as.numeric(valuation)
+median(valuation)
+boxplot(valuation, col = "cyan", horizontal = TRUE,xlabs = "Valuation in Billions", main = "Valuation of Startups with females leaders", sub = "Avg: 2.89, Median: 1.5")
+```
+
+```         
+```
+
+![The above plot shows us that the countries with most female contribution to unicorns is Vietnam and Lithuania. Countries like India and US although have a lot of Unicorn start-ups, have low share of female founder/co-founder.](Female_distribution.png)
+
+------------------------------------------------------------------------
+
+## Conclusion
+
+- Most unicorns emerge from the US and China.
+
+- There’s a positive correlation between the GDP of a country and the number of unicorns.
+
+- Most unicorns emerge from developed countries but India and China are the exceptions to this.
+
+- Max number of unicorns emerge from the Enterprise Tech industry. 
+
+- The Industries with the most valuation are Media & Entertainment and Financial Services. 
+
+- Before COVID Consumer and Retail had the highest number of unicorns, after Covid Enterprise-Tech emerged as the industry having the most number of unicorns.
+
+- Unicorns emerged during the COVID period despite the economy of the country being down. 
+
+- Countries having the most share of female-led startups are Vietnam and Lithuania. 
+
+## References
+
+- CB Insights
+    - <https://www.cbinsights.com/research-unicorn-companies>
+
+- Wikipedia
+    - <https://en.m.wikipedia.org/wiki/List_of_countries_by_GDP_(nominal)>
+
+- Insider
+    - <https://insider.finology.in/business/indian-unicorns-losing>
+    - <https://golden.com/query/list-of-founders-of-unicorn-companies-GNEZ>
